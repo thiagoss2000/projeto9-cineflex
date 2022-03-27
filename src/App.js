@@ -1,4 +1,5 @@
 import Rota from "./Rota";
+import Filme from "./Filme";
 import './Reset.css';
 import './App.css';
 import './Rota.css';
