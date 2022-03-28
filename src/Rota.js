@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-//import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
-import "./Rota.css";
+import {Loading, Subtitulo, Corpo, Filme} from "./Styles"
+import loading from "./assets/Rolling-1s-187px.svg"
 
 export default function Rota() {
 
@@ -16,22 +17,24 @@ export default function Rota() {
     }, []);
 
     if (filmes.length === undefined){
-        return <p>loading</p>
+        return <Loading src={loading} alt="loading..."></Loading>
     }else{
         return (
             <>
-            <div className="subtitulo">
+            <Subtitulo>
                 <p>Selecione o filme</p>
-            </div>
-            <div className="corpo">
+            </Subtitulo>
+            <Corpo>
                 {filmes.map((filme) => {
                     return (
-                        <div key={filme.id}className="filme">
-                            <img src={filme.posterURL} alt={filme.title}></img>
-                        </div>
+                        <Link to={`/filme/${filme.id}`} key={filme.id} >
+                            <Filme>
+                                <img src={filme.posterURL} alt={filme.title}></img>
+                            </Filme>
+                        </Link>
                     )
                 })}
-            </div>
+            </Corpo>
             </>
         );
     }
