@@ -1,5 +1,6 @@
 import Rota from "./Rota";
 import Filme from "./Filme";
+import Assentos from "./Assentos";
 import './Reset.css';
 import './App.css';
 import './Rota.css';
@@ -10,7 +11,7 @@ function App() {
       <header>
           <h1>CINEFLEX</h1>
       </header>
-      <Rota />
+      <Assentos />
     </div>
   );
 }
