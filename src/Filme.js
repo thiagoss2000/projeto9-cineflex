@@ -18,7 +18,6 @@ export default function Filme() {
     if (filmes === undefined){
         return <p>loading</p>
     }else{
-        console.log(filmes.days[1]);
         return (
             <>
             <div className="subtitulo">
@@ -40,9 +39,12 @@ export default function Filme() {
                 })}
                 <div className="espaco"></div>
                 <div className="filmeSelecionado">
-                    <img src={""} alt="img"></img>
-                    <p>Enola Holmes</p>
+                    <img src={filmes.posterURL} alt="img"></img>
+                    <p>{filmes.title}</p>
                 </div>
+                {/* <div>
+                    <p1>{filmes.overview}</p1>
+                </div> */}
             </>
         );
     }

@@ -73,6 +73,8 @@ export const Dados = styled.form `
         height: 42px;
         background: #E8833A;
         border-radius: 3px;
+    }
+    p{
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 400;
